@@ -15,9 +15,24 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<properties>
+          <sonar.host.url>
+                 http://3.137.192.29:9000/
+          </sonar.host.url>
+          <sonar.login>admin</sonar.login>
+          <sonar.password>1234</sonar.password>
   </properties>
+  <distributionManagement>
+    <repository>
+            <id>myapp</id>
+        <url>http://18.221.153.95:8081/repository/remoterepo/</url>
+    </repository>
+    <snapshotRepository>
+            <id>myapp</id>
+        <url>http://18.221.153.95:8081/repository/snaprepo/</url>
+    </snapshotRepository>
+</distributionManagement>
+
   <build>
     <pluginManagement>
       <plugins>
