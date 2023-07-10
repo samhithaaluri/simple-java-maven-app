@@ -17,7 +17,7 @@ pipeline {
         
         }
         post{
-                FAILURE{
+                failure{
                         emailext body: 'Your pipeline is failed', subject: 'failed', to: 'samhithaaluri@gmail.com'
                 }
         }
