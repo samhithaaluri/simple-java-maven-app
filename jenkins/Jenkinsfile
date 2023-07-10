@@ -13,9 +13,15 @@ pipeline {
             steps {
                 sh 'mvn deploy sonar:sonar'
             }
-
+        }
+        
+        }
+        post{
+                FAILURE{
+                        emailext body: 'Your pipeline is failed', subject: 'failed', to: 'samhithaaluri@gmail.com'
+                }
         }
 
     }
-}
+
 
