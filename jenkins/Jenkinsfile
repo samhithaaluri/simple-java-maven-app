@@ -18,7 +18,7 @@ pipeline {
         }
         post{
                 failure{
-                        emailext body: 'Your pipeline is failed', subject: 'failed', to: 'samhithaaluri@gmail.com'
+                        emailext attachLog: true, body: 'pipeline failed', recipientProviders: [buildUser()], subject: 'failed', to: 'samhithaaluri@gmail.com'
                 }
         }
 
